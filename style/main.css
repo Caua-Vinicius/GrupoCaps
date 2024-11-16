@@ -1,40 +1,66 @@
 /* classes attached to <body> */
+.row-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
 
-.lista {
-  padding-top: 10%;
+.container-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centralizar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 300px;
+}
+
+.lista,
+.lista2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.lista i {
-  padding: 10px;
-  font-size: 30px;
-  color: #000;
-}
-
-.lista div {
+.lista div,
+.lista2 div {
   display: flex;
+  width: 150px;
+  height: 150px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.lista h2 {
-  word-break: break-all;
-  font-size: 18px;
-  font-weight: bold;
+.lista div:hover,
+.lista2 div:hover {
+  background-color: rgba(241, 100, 33, 0.9);
+  /* Cor laranja com 20% de opacidade */
 }
 
-
-.lista2 {
-  padding-top: 5%;
-  padding-bottom: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.lista div:hover i,
+.lista2 div:hover i {
+  color: #fff;
+  /* Cor laranja com 20% de opacidade */
 }
 
+.lista i,
+.lista2 i {
+  padding: 10px;
+  font-size: 30px;
+  color: #F16421;
+}
+
+.lista div,
 .lista2 div {
   display: flex;
   flex-direction: column;
@@ -42,10 +68,12 @@
   text-align: center;
 }
 
+.lista h2,
 .lista2 h2 {
   word-break: break-all;
-  font-size: 18px;
-  font-weight: bold
+  font-size: 15px;
+  font-weight: bold;
+  color: #0C326F;
 }
 
 .fc-not-allowed,
