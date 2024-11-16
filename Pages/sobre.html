@@ -654,6 +654,20 @@
   <noscript><p><img src="//webstats.periodicos.capes.gov.br/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
   End Piwik Code -->
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('a');
+      links.forEach(link => {
+        if (link.href.startsWith('http') && !link.href.includes(window.location.hostname)) {
+          link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const externalUrl = link.href;
+            window.location.href = `external.html?url=${encodeURIComponent(externalUrl)}`;
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 

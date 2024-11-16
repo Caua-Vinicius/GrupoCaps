@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 80vh;
 }
 
 .container-lista {
@@ -17,8 +17,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 800px;
-  height: 300px;
+  width: 900px;
+  height: 500px;
 }
 
 .lista,
@@ -39,6 +39,15 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.lista div {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.lista2 div {
+  margin-top: -70px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
 }
 
 .lista div:hover,
