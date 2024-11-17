@@ -248,3 +248,42 @@ document.addEventListener('DOMContentLoaded', function () {
   // Inicializa o carrossel
   showSlide(currentIndex);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const messageButton = document.getElementById('mensagem');
+  const modal = document.getElementById('messageModal');
+  const closeModal = document.querySelector('.modal .close');
+  const sendMessageButton = document.getElementById('sendMessage');
+  const notification = document.getElementById('notification');
+  const matchSection = document.querySelector('.match');
+
+  // Abre o modal ao clicar no botão de mensagem
+  messageButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = 'block';
+  });
+
+  // Fecha o modal ao clicar no botão de fechar
+  closeModal.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  // Envia a mensagem fictícia e oculta a seção match
+  sendMessageButton.addEventListener('click', function () {
+    modal.style.display = 'none';
+    matchSection.style.display = 'none';
+    notification.style.display = 'block';
+
+    // Oculta a notificação após 3 segundos
+    setTimeout(function () {
+      notification.style.display = 'none';
+    }, 3000);
+  });
+
+  // Fecha o modal ao clicar fora dele
+  window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
+});
