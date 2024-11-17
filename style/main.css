@@ -9,6 +9,15 @@
   height: 100%;
 }
 
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
 .ajuste {
   display: flex;
   justify-content: space-between;
