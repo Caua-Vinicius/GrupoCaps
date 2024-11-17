@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <header id="row shadow-sm"></header>
+    <div class="row bg-white" id="row-bg-white"></div>
+    <div class="menu-footer py-5" id="menu-footer"></div>
     <iframe id="external-frame"></iframe>
 
     <script>
@@ -26,6 +29,20 @@
                 const iframe = document.getElementById('external-frame');
                 iframe.src = externalUrl;
             }
+
+            // Carregar conteúdo do index.html e substituir elementos
+            fetch('index.html')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(data, 'text/html');
+
+                    // Substituir elementos
+                    document.getElementById('header').innerHTML = doc.querySelector('header').innerHTML;
+                    document.getElementById('row-bg-white').innerHTML = doc.querySelector('.row.bg-white').innerHTML;
+                    document.getElementById('menu-footer').innerHTML = doc.querySelector('.menu-footer.py-5').innerHTML;
+                })
+                .catch(error => console.error('Erro ao carregar index.html:', error));
         });
     </script>
 </body>

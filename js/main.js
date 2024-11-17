@@ -121,3 +121,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("Quebras de linha adicionadas aos elementos <h2>");
 });
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelector('.slides');
+  const dots = document.querySelectorAll('.dot');
+
+  // Verifica se o índice está dentro do limite
+  if (index >= dots.length) index = 0;
+  if (index < 0) index = dots.length - 1;
+
+  currentSlide = index;
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+
+function setSlide(index) {
+  showSlide(index);
+}
+
+function autoSlide() {
+  const slides = document.querySelectorAll('.slide');
+
+  // Incrementa o índice ou reinicia para o primeiro slide
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  showSlide(currentSlide);
+}
+
+// Inicia o carrossel com alternância automática
+setInterval(autoSlide, 8000);

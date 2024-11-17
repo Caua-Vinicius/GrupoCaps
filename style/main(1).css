@@ -845,7 +845,7 @@ section {
     position: absolute;
     padding: 10px;
     pointer-events: none;
-    padding: 18px;
+    padding: 30px;
     font-size: 22px;
     font-weight: bold;
 }
@@ -1309,12 +1309,26 @@ a.btn-link.active {
     background: radial-gradient(circle, rgba(246, 246, 246, 1) 50%, rgba(87, 173, 73, 1) 54%, rgba(87, 173, 73, 1) 63%, rgba(32, 119, 170, 1) 76%, rgba(42, 60, 136, 1) 84%);
 }
 
+.botao {
+    display: flex;
+    justify-content: right;
+}
+
+.barra-pes {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    width: 80%;
+}
+
 .busca-watson input {
     border: none;
     border-radius: 0px;
     height: 3.5em;
     font-weight: bold;
     font-size: 1.2em;
+    margin-top: -70px;
     padding-left: 100px;
     padding-right: 110px;
     border-bottom: solid var(--cor-padrao-1);
