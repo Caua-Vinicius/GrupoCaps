@@ -433,27 +433,27 @@
                     <div class="item-page" itemscope="" itemtype="https://schema.org/Article">
                         <meta itemprop="inLanguage" content="pt-BR">
                         <div class="centralizar-acervo">
-                            <div class="lista-acervo">
-                                <div id="checkbox-element">
-                                    <a href="">
-                                        <h2>ACESSO <br> ABERTO</h2>
-                                    </a>
-                                </div>
-                                <div id="checkbox-element">
-                                    <a href="#">
-                                        <h2>QUEM <br> SOMOS</h2>
-                                    </a>
-                                </div>
-                                <div id="checkbox-element">
-                                    <a href="./acervo.html#">
-                                        <h2>MISSÃO <br> OBJETIVO</h2>
-                                    </a>
-                                </div>
-                                <div id="checkbox-element">
-                                    <a href="">
-                                        <h2>NOSSA <br> HISTÓRIA</h2>
-                                    </a>
-                                </div>
+                            <div style="
+                                  display: flex;
+                                  flex-direction: row;
+                                  justify-content: center;
+                                  align-items: center;
+                                  padding: 8px 18px;
+                                  gap: 10px;
+                                  margin-top: 30px;
+                                ">
+                              <a style="text-decoration: none;" href="">
+                                <div class="btn-colab-focus">Buscar Assunto</div>
+                              </a>
+                              <a style="text-decoration: none;" href="">
+                                <div class="btn-colab">Lista de Base</div>
+                              </a>
+                              <a style="text-decoration: none;" href="">
+                                <div class="btn-colab">LIsta de Livros</div>
+                              </a>
+                              <a style="text-decoration: none;" href="">
+                                <div class="btn-colab">LIsta de Periodicos</div>
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -464,6 +464,16 @@
 
 
         <center>
+            <div style="display: flex; gap: 10px; margin: 0px 10% 0px 10%;">
+                <label style="color: var(--cor-padrao-1); font-weight: 600;">
+                    <input style="accent-color: var(--cor-padrao-2);" type="checkbox" name="contem" value="Contem">
+                    Contem
+                </label>
+                <label style="color: var(--cor-padrao-1); font-weight: 600;">
+                    <input style="accent-color: var(--cor-padrao-2);" type="checkbox" name="exato" value="exato">
+                    É(Exato)
+                </label>
+            </div>
             <div class="barra-pes">
                 <form action="" method="GET" id="busca" class="busca-watson">
                     <div class="search-default">
