@@ -1,4 +1,89 @@
 /* classes attached to <body> */
+.ajuste {
+  display: flex;
+  justify-content: space-between;
+  /* Espaça os itens igualmente */
+  align-items: flex-start;
+}
+
+.post {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h1 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.post h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.post img {
+  max-width: 100%;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+/* Comentários */
+#comments-section {
+  margin-top: 20px;
+}
+
+#comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+#comments-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#comments-list li span {
+  margin-left: 10px;
+  color: #007BFF;
+}
+
+.add-comment {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-comment textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.add-comment button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
 /* Estilos para o modal */
 .modal {
   display: none;
@@ -69,6 +154,74 @@ textarea {
   padding: 15px;
   border-radius: 5px;
   z-index: 1;
+}
+
+.post {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post img {
+  max-width: 100%;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+/* Comentários */
+#comments-section {
+  margin-top: 20px;
+}
+
+#comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+#comments-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#comments-list li span {
+  margin-left: 10px;
+  color: #007BFF;
+}
+
+.add-comment {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-comment textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.add-comment button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #0056b3;
 }
 
 
