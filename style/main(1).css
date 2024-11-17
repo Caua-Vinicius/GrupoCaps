@@ -151,6 +151,7 @@
 body {
     background-color: rgba(246, 246, 246, 1);
     font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
 }
 
 .text-default-1 {

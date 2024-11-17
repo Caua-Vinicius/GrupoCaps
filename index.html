@@ -860,6 +860,37 @@
 
         gtag('config', 'G-DSV7MH35Q7');
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apify-client@2.10.0"></script>
+    <script>
+        document.getElementById('busca').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const query = document.getElementById('input-busca').value;
+            const client = new ApifyClient({
+                token: 'apify_api_d1sd9ckmOa10M2aLOwnNi8Hj8k94oV03nVkV',
+            });
+
+            const input = {
+                "keyword": query,
+                "proxyOptions": {
+                    "useApifyProxy": true
+                }
+            };
+
+            try {
+                const run = await client.actor("marco.gullo/google-scholar-scraper").call(input);
+                const { items } = await client.dataset(run.defaultDatasetId).listItems();
+
+                // Redirecionar para resultado.html com os resultados
+                localStorage.setItem('searchResults', JSON.stringify(items));
+                window.location.href = './Pages/resultado.html';
+            } catch (error) {
+                console.error('Erro ao buscar resultados:', error);
+            }
+        });
+    </script>
+
     <!-- Piwik
   <script type="text/javascript">
     var _paq = _paq || [];
