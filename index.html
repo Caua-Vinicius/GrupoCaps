@@ -157,7 +157,7 @@
                                         <ul class="nav-child unstyled small">
                                         </ul>
                                     </li>
-                                    <li class="item-648 deeper parent"><a href="/#">Acervo</a>
+                                    <li class="item-648 deeper parent"><a href="./Pages/acervo.html">Acervo</a>
                                     </li>
                                     <li class="item-649 deeper parent"><a href="/#">Treinamentos</a>
                                         <ul class="nav-child unstyled small">
@@ -350,7 +350,7 @@
                             <ul class="nav menu mod-list">
                                 <li class="item-646 deeper parent"><a href="./Pages/sobre.html">Sobre</a>
                                 </li>
-                                <li class="item-648 deeper parent"><a href="/#">Acervo</a>
+                                <li class="item-648 deeper parent"><a href="./Pages/acervo.html">Acervo</a>
                                 </li>
                                 <li class="item-649 deeper parent"><a href="/#">Treinamentos</a>
                                     <ul class="nav-child unstyled small">
@@ -557,7 +557,7 @@
                                         <div
                                             class="col-sm-6 col-lg-4 col-md-4 col-xs-6 mb-3 d-none d-sm-none d-md-block">
                                             <figure class="card shadow border-0 card-informativo">
-                                                <img class="card-img-top" src="./style/Matria_Biochemical_Society.png"
+                                                <img class="card-img-top" src="./images/Matria_Biochemical_Society.png"
                                                     height="250"
                                                     alt="Treinamento discute publicação de artigo na Biochemical Society">
                                                 <figcaption class="card-body">
@@ -640,10 +640,6 @@
                         <a class="btn btn-control mb-3 controlInformativo-l" href="/#carouselInformativoMobile"
                             role="button" data-slide="prev">
                             <i class="fas fa-angle-left"></i>
-                        </a>
-                        <a class="btn btn-control mb-3 controlInformativo-r" href="/#carouselInformativoMobile"
-                            role="button" data-slide="next">
-                            <i class="fas fa-angle-right"></i>
                         </a>
                         <div id="carouselInformativoMobile" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
@@ -750,8 +746,7 @@
                         </div>
                     </div>
                     <div class="col-1 text-left d-none d-sm-none d-md-block">
-                        <a class="btn btn-link mb-3" href="/#carouselExampleIndicators2" role="button"
-                            data-slide="next">
+                        <a class="btn btn-link mb-3 ml-1" href="#" role="button" data-slide="next">
                             <i class="fas fa-angle-right icon-slide-informativo"></i>
                         </a>
                     </div>
@@ -866,44 +861,6 @@
     <script src="./style/cookieAlerta.js"></script>
     <!-- Google Analytics -->
     <!-- Google tag (gtag.js) -->
-    <script async="" src="./style/js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-DSV7MH35Q7');
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/apify-client@2.10.0"></script>
-    <script>
-        document.getElementById('busca').addEventListener('submit', async function (event) {
-            event.preventDefault();
-
-            const query = document.getElementById('input-busca').value;
-            const client = new ApifyClient({
-                token: 'apify_api_d1sd9ckmOa10M2aLOwnNi8Hj8k94oV03nVkV',
-            });
-
-            const input = {
-                "keyword": query,
-                "proxyOptions": {
-                    "useApifyProxy": true
-                }
-            };
-
-            try {
-                const run = await client.actor("marco.gullo/google-scholar-scraper").call(input);
-                const { items } = await client.dataset(run.defaultDatasetId).listItems();
-
-                // Redirecionar para resultado.html com os resultados
-                localStorage.setItem('searchResults', JSON.stringify(items));
-                window.location.href = './Pages/resultado.html';
-            } catch (error) {
-                console.error('Erro ao buscar resultados:', error);
-            }
-        });
-    </script>
 
     <!-- Piwik
   <script type="text/javascript">

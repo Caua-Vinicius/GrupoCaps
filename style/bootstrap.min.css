@@ -7468,7 +7468,7 @@ button.bg-dark:hover {
 }
 
 .bg-white {
-    background-color: #fff !important
+    background-color: #fff
 }
 
 .bg-transparent {
@@ -11358,7 +11358,7 @@ a.text-light:hover {
 }
 
 .text-dark {
-    color: #343a40 !important
+    color: #343a40
 }
 
 a.text-dark:focus,

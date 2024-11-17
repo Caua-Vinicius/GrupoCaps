@@ -1,5 +1,277 @@
 /* classes attached to <body> */
 
+
+
+
+
+
+
+.conexao {
+  display: flex;
+  margin: -100px 13% 40px 13%;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  height: 750px;
+}
+
+.conectar {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+}
+
+.perfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: start;
+  width: 100%;
+}
+
+.perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.nome-nivel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.nome-nivel h2 {
+  margin-top: 30px;
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nome-nivel p {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.especificar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.especificar p {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.especificar input {
+  margin-top: 10px;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.especificar select {
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.botao a {
+  margin-top: 10px;
+  margin-left: 200px;
+  width: 200px;
+  height: 40px;
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 1px solid #F16421;
+  background-color: #F16421;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.botao a:hover {
+  background-color: #F16421;
+  color: #fff;
+  text-decoration: none;
+}
+
+.match {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.mini-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F16421;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 5%;
+}
+
+.mini-box h2 {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.mini-box a {
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #1C1C5E;
+  background-color: #1C1C5E;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.mini-box a:hover {
+  background-color: #1C1C5E;
+  color: #fff;
+  text-decoration: none;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #Fff;
+  width: 300px;
+  height: 250px;
+  margin-top: 10px;
+  border-radius: 5%;
+}
+
+.box2 h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.box2 p {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.star {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ff0;
+}
+
+.mini-perfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.mini-perfil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+body.contrast-mode a {
+  color: #ff0;
+}
+
+
+body.contrast-mode .bg-white {
+  background-color: #000;
+}
+
+body.contrast-mode header {
+  background-color: #000;
+}
+
+body.contrast-mode .navegue-menu li a,
+body.contrast-mode .text-dark {
+  color: #ff0;
+}
+
+
+body.contrast-mode .btn {
+  background-color: #fff;
+  color: #000;
+}
+
+body.contrast-mode .card {
+  background-color: #333;
+  color: #fff;
+}
+
+body.contrast-mode .navbar,
+body.contrast-mode .footer {
+  color: #fff;
+}
+
+body.contrast-mode .navbar a,
+body.contrast-mode .footer p {
+  color: #ff0;
+}
+
+body.contrast-mode .form-control {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+body.contrast-mode .table {
+  background-color: #333;
+  color: #fff;
+}
+
+body.contrast-mode .table th,
+body.contrast-mode .table td {
+  border-color: #555;
+}
+
 .carousel {
   position: relative;
   overflow: hidden;
@@ -77,6 +349,15 @@
   height: 500px;
 }
 
+.centralizar-acervo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 200px;
+}
+
 .lista,
 .lista2 {
   display: flex;
@@ -97,6 +378,24 @@
   text-align: center;
 }
 
+.lista-acervo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.lista-acervo div {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
 .lista div {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
 }
@@ -109,13 +408,19 @@
 .lista div:hover,
 .lista2 div:hover {
   background-color: rgba(241, 100, 33, 0.9);
-  /* Cor laranja com 20% de opacidade */
+  text-decoration: none;
 }
 
 .lista div:hover i,
 .lista2 div:hover i {
   color: #fff;
-  /* Cor laranja com 20% de opacidade */
+  text-decoration: none;
+}
+
+.lista div:hover a,
+.lista2 div:hover a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .lista i,
@@ -133,8 +438,20 @@
   text-align: center;
 }
 
+.selected {
+  background-color: orange;
+  color: white;
+}
+
 .lista h2,
 .lista2 h2 {
+  word-break: break-all;
+  font-size: 15px;
+  font-weight: bold;
+  color: #0C326F;
+}
+
+.lista-acervo h2 {
   word-break: break-all;
   font-size: 15px;
   font-weight: bold;

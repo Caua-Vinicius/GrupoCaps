@@ -154,4 +154,97 @@ function autoSlide() {
 }
 
 // Inicia o carrossel com alternância automática
-setInterval(autoSlide, 8000);
+document.addEventListener('DOMContentLoaded', function () {
+  const prevButton = document.querySelector('a[data-slide="prev"]');
+  const nextButton = document.querySelector('a[data-slide="next"]');
+  const carousel = document.getElementById('carouselExampleIndicators2');
+
+  if (prevButton && nextButton && carousel) {
+    prevButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      $('#carouselExampleIndicators2').carousel('prev');
+    });
+
+    nextButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      $('#carouselExampleIndicators2').carousel('next');
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const prevButton = document.querySelector('a[data-slide="prev"]');
+  const nextButton = document.querySelector('a[data-slide="next"]');
+  const carousel = document.getElementById('carouselExampleIndicators2');
+
+  if (prevButton && nextButton && carousel) {
+    prevButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      $('#carouselExampleIndicators2').carousel('prev');
+    });
+
+    nextButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      $('#carouselExampleIndicators2').carousel('next');
+    });
+  }
+
+  const contrastButton = document.querySelector('.barra-gov-br-nav-link.contraste');
+
+  // Verifica se o modo contraste está ativado no localStorage
+  if (localStorage.getItem('contrastMode') === 'enabled') {
+    document.body.classList.add('contrast-mode');
+  }
+
+  contrastButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    document.body.classList.toggle('contrast-mode');
+
+    // Armazena a preferência do usuário no localStorage
+    if (document.body.classList.contains('contrast-mode')) {
+      localStorage.setItem('contrastMode', 'enabled');
+    } else {
+      localStorage.removeItem('contrastMode');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const checkboxElement = document.getElementById('checkbox-element');
+
+  checkboxElement.addEventListener('click', function (event) {
+    event.preventDefault(); // Evita o comportamento padrão do link
+    checkboxElement.classList.toggle('selected');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    carouselItems.forEach((item, i) => {
+      item.classList.remove('active');
+      if (i === index) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  prevButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+    showSlide(currentIndex);
+  });
+
+  nextButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+    showSlide(currentIndex);
+  });
+
+  // Inicializa o carrossel
+  showSlide(currentIndex);
+});
