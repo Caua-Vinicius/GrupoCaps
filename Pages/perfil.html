@@ -444,7 +444,7 @@
                                 <!-- Fazer o login -->
                                 <div class="card-body" id="body-login">
                                     <h5 class="card-title mb-4 mt-4">Entrar</h5>
-                                    <form id="form-login" name="frmLogin" action="construcao" method="post">
+                                    <form id="form-login" name="frmLogin" action="./perfil.html" method="GET">
                                         <input type="hidden" name="989b500bb080ff678491d67809ea6f0b" value="1" />
                                         <div class="form-row">
                                             <div class="col-md-12">
@@ -697,10 +697,11 @@
     <div class="container-perfil">
         <h1>Olá, Silvio Meira!</h1>
         <h1>Seu último acesso foi Segunda-feira (30/11/2024) às 00:00.</h1>
-        <div>
+        <div style="width: 50%;">
             <h3>Perfil</h3>
-            <div class="horizontal">
-                <img src="" alt="">
+            <div class="horizontal-l">
+                <img style="margin-left: -20px; margin-right: 50px; width: 80px; height: 70px;"
+                    src="../images/logoperfil.png" alt="">
                 <h2>Silvio Meira</h2>
                 <p>Alterar nome.</p>
             </div>
@@ -733,38 +734,40 @@
                     <span class="slider round"></span>
                 </label>
             </div>
-            <h1>Dados Cadastrais</h1>
-            <div>
+            <h3>Dados Cadastrais</h3>
+            <div class="horizontal1">
                 <div>
                     <p>
                         Nome:
                     </p>
                     <input type="text">
                 </div>
-                <div>
+                <div style="margin-left: 30px;">
                     <p>
                         Sobrenome:
                     </p>
                     <input type="text">
                 </div>
-                <div>
-                    <p>
-                        E-mail:
-                    </p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>
-                        Alterar senha:
-                    </p>
-                    <input type="password">
-                </div>
-                <div>
-                    <a href="">Salvar Alterações</a>
-                    <a href="">Cancelar</a>
-                </div>
             </div>
+            <div class="horizontal2" style="margin: 20px;">
+                <p>
+                    E-mail:
+                </p>
+                <input type="text">
+            </div>
+            <div class="horizontal2" style="margin: 20px;">
+                <p>
+                    Alterar senha:
+                </p>
+                <input type="password">
+            </div>
+            <div class="acao">
+                <a href="">Salvar Alterações</a>
+                <a href="">Cancelar</a>
+            </div>
+
         </div>
+    </div>
     </div>
 
     <!-- Adicione mais itens do carrossel aqui -->
